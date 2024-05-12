@@ -1,36 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>SB Admin 2 - Login</title>
-  <!-- Custom fonts for this template-->
-  <link href="{{ asset('admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-  
-  <!-- Custom styles for this template-->
-  <link href="{{ asset('admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
+  <title>Login</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="{{asset('assets/estilos.css')}}">
+  <link rel="icon" href="{{asset('images/PurpleBadgeAcademyLogo.png')}}">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 </head>
-<body class="bg-gradient-primary">
-  <div class="container">
-    <!-- Outer Row -->
-    <div class="row justify-content-center">
-      <div class="col-xl-10 col-lg-12 col-md-9">
-        <div class="card o-hidden border-0 shadow-lg my-5">
-          <div class="card-body p-0">
-            <!-- Nested Row within Card Body -->
-            <div class="row">
-              <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-              <div class="col-lg-6">
-                <div class="p-5">
-                  <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
-                  </div>
-                  <form action="{{ route('login.action') }}" method="POST" class="user">
-                    @csrf
+
+
+<body>
+  <section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+
+              <div class="mb-md-5 mt-md-4 pb-5">
+
+              <form action="{{ route('login.action') }}" method="POST" class="">
+              @csrf
                     @if ($errors->any())
                       <div class="alert alert-danger">
                           <ul>
@@ -40,39 +34,56 @@
                           </ul>
                       </div>
                     @endif
-                    <div class="form-group">
-                      <input name="email" type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
-                    </div>
-                    <div class="form-group">
-                      <input name="password" type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                      <div class="custom-control custom-checkbox small">
-                        <input name="remember" type="checkbox" class="custom-control-input" id="customCheck">
-                        <label class="custom-control-label" for="customCheck">Remember
-                          Me</label>
-                      </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block btn-user">Login</button>
-                  </form>
-                  <hr>
-                  <div class="text-center">
-                    <a class="small" href="{{ route('register') }}">Create an Account!</a>
+                  <h2 class="fw-bold mb-2 text-uppercase">login</h2>
+                  <br>
+
+                  <div data-mdb-input-init class="form-outline form-white mb-4">
+                    <label class="form-label" for="typeEmailX">Correo</label>
+                    <input name="email" type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+
+
+                    @error('email')
+                    <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                   </div>
-                </div>
+                  <div data-mdb-input-init class="form-outline form-white mb-4">
+                    <label class="form-label" for="typePasswordX">ContraseÃ±a</label>
+                    <input name="password" type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+
+
+                    @error('password')
+                    <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                  </div>
+
+                  <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">Iniciar Sesion </button>
+
+
+
               </div>
+
+              <div>
+                <p class="mb-0">No estas registrado? <a href="{{route('register')}}" class="text-white-50 fw-bold">Registrate</a>
+                </p>
+              </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Bootstrap core JavaScript-->
-  <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
-  <script src="{{ asset('admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <!-- Core plugin JavaScript-->
-  <script src="{{ asset('admin/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
-  <!-- Custom scripts for all pages-->
-  <script src="{{ asset('admin/js/sb-admin-2.min.js') }}"></script>
+  </section>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+  </script>
 </body>
+
 </html>
