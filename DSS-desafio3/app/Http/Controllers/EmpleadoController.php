@@ -158,7 +158,7 @@ class EmpleadoController extends Controller
 
         $empleados -> update($request->all());
 
-        return redirect()->route('empleados')->with('success', 'Empleado creado con éxito');
+        return redirect()->route('empleados')->with('success', 'Empleado actualizado con éxito');
     }
 
     /**
@@ -170,6 +170,6 @@ class EmpleadoController extends Controller
 
         $empleados -> delete();
 
-        return redirect()->route('empleados')->with('success', 'Empleado creado con éxito');
+        return redirect()->route('empleados')->with('success', 'Empleado eliminado con éxito');
     }
 }

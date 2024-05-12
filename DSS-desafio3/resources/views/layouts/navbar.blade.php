@@ -1,93 +1,83 @@
 
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{route('empleados.index')}}">Panel Administrador</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">{{ auth()->user()->name }}</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+          <a class="nav-link" href="{{ route('empleados') }}">
+      {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
+      <span style="text-decoration: underline !important;">Empleados</span></a>
+          </li>
+          
+          <li class="nav-item dropdown">
+          <a class="nav-link" href="/profile">
+      {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
+      <span style="text-decoration: underline !important;">Profile</span></a>
+            
+          </li>
+        </ul>
+        <form class="d-flex mt-3" role="search">
+        <a class="btn btn-success" href="{{ route('logout') }}">
+          
+          Cerrar Sesion 
+        </a>
+         
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
   
   <!-- Sidebar Toggle (Topbar) -->
   <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
     <i class="fa fa-bars"></i>
   </button>
-  
-  <!-- Topbar Search -->
-  {{-- <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-    <div class="input-group">
-      <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-      <div class="input-group-append">
-        <button class="btn btn-primary" type="button">
-          <i class="fas fa-search fa-sm"></i>
-        </button>
-      </div>
-    </div>
-  </form> --}}
-  
-  <!-- Nav Item - Dashboard -->
-  <h4>Panel Admin</h4>
-  <h4></h4>
-  <li class="nav-item mb-4 mr-3 text-decoration-underline">
-    <a class="nav-link" href="{{ route('empleados') }}">
-      {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
-      <span style="text-decoration: underline !important;">Empleados</span></a>
-  </li>
-  
-  <li class="nav-item mb-4 mr-3">
-    <a class="nav-link" href="/profile">
-      {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
-      <span style="text-decoration: underline !important;">Profile</span></a>
-  </li>
 
-  <!-- Topbar Navbar -->
-  <ul class="navbar-nav ml-auto">
-  
-    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-    <li class="nav-item dropdown no-arrow d-sm-none">
-      <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fas fa-search fa-fw"></i>
-      </a>
-      <!-- Dropdown - Messages -->
-      <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-        <form class="form-inline mr-auto w-100 navbar-search">
-          <div class="input-group">
-            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-              <button class="btn btn-primary" type="button">
-                <i class="fas fa-search fa-sm"></i>
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </li>
-  
-    <!-- Nav Item - Alerts -->
-   
-  
-    <!-- Nav Item - Messages -->
-   
-    <div class="topbar-divider d-none d-sm-block"></div>
-  
-    <!-- Nav Item - User Information -->
-    <li class="nav-item dropdown no-arrow">
-      <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="mr-2 d-none d-lg-inline text-gray-900 small">
-          {{ auth()->user()->name }}
-          <br>
-          <small>{{ auth()->user()->level }}</small>
-        </span>
-        
-      </a>
-      <!-- Dropdown - User Information -->
-      <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-        <a class="dropdown-item" href="/profile">
-          <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-          Profile
-        </a>
-            
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="{{ route('logout') }}">
-          <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-          Logout
-        </a>
-      </div>
-    </li>
-  
   </ul>
   
 </nav>

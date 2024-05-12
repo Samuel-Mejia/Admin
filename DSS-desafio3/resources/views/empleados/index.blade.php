@@ -37,23 +37,23 @@
                         <td class="align-middle">$ {{ $empleado->salario }}</td>
                         <td class="align-middle">
                             <div class="btn-group" role="group" aria-label="Basic example"
-                                style="">
+                              >
                                 <a href="{{ route('empleados.show', $empleado->id) }}" type="button"
-                                    class="btn btn-secondary">Detail</a>
+                                    class="btn btn-secondary">Detalle</a>
 
                             </div>
                             <div class="btn-group" role="group" aria-label="Basic example"
-                                style="">
+                               >
                                 <a href="{{ route('empleados.edit', $empleado->id) }}" type="button"
-                                    class="btn btn-warning">Edit</a>
+                                    class="btn btn-warning">Editar</a>
                             </div>
                             <div class="btn-group" role="group" aria-label="Basic example"
-                                style="">
+                                >
                                 <form action="{{ route('empleados.destroy', $empleado->id) }}" method="POST" type="button"
                                     class="btn btn-danger p-0" onsubmit="return confirm('Delete?')">
                                     @csrf
                                     @method('DELETE')
-                                    <button class="btn btn-danger m-0">Delete</button>
+                                    <button class="btn btn-danger m-0">Eliminar</button>
                                 </form>
                             </div>
 
@@ -68,3 +68,7 @@
         </tbody>
     </table>
 @endsection
+
+
+
+
