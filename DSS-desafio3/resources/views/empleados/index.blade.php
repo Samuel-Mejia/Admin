@@ -39,13 +39,13 @@
                             <div class="btn-group" role="group" aria-label="Basic example"
                               >
                                 <a href="{{ route('empleados.show', $empleado->id) }}" type="button"
-                                    class="btn btn-secondary">Detalle</a>
+                                    class="btn btn-outline-primary">Detalle</a>
 
                             </div>
                             <div class="btn-group" role="group" aria-label="Basic example"
                                >
                                 <a href="{{ route('empleados.edit', $empleado->id) }}" type="button"
-                                    class="btn btn-warning">Editar</a>
+                                    class="btn btn-outline-warning">Editar</a>
                             </div>
                             <div class="btn-group" role="group" aria-label="Basic example"
                                 >
