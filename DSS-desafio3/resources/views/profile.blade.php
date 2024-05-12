@@ -19,12 +19,12 @@
                             <div class="col-md-6">
                                 <label class="labels">Nombre</label>
                                 <input type="text" name="name" class="form-control" placeholder="Nombre"
-                                    value="{{ auth()->user()->name }}">
+                                    value="{{ auth()->user()->name }}" readonly>
                             </div>
                             <div class="col-md-6">
                                 <label class="labels">Apellido</label>
                                 <input type="text" name="lastname" class="form-control" placeholder="Apellido"
-                                    value="{{ auth()->user()->lastname }}">
+                                    value="{{ auth()->user()->lastname }}" readonly>
                             </div>
 
                         </div>
@@ -32,23 +32,22 @@
                             <div class="col-md-6">
                                 <label class="labels">Email</label>
                                 <input type="text" name="email" disabled class="form-control"
-                                    value="{{ auth()->user()->email }}" placeholder="Email">
+                                    value="{{ auth()->user()->email }}" placeholder="Email" readonly>
                             </div>
                             <div class="col-md-6">
                                 <label class="labels">Cargo</label>
                                 <input type="text" name="cargo" class="form-control"
-                                    value="{{ auth()->user()->cargo }}" placeholder="Cargo">
+                                    value="{{ auth()->user()->cargo }}" placeholder="Cargo" readonly>
                             </div>
                         </div>
                         <div class="row mt-2">
                             <div class="col-md-6">
                                 <label class="labels">Salario</label>
-                                <input type="text" name="salario" class="form-control" placeholder="Salario"
-                                    value="{{ auth()->user()->salario }}">
+                                <input type="text" name="salario" class="form-control" placeholder="$"
+                                    value="${{ auth()->user()->salario }}" readonly>
                             </div>
                         </div>
-                        <div class="mt-5 text-center"><button id="btn" class="btn btn-primary profile-button"
-                                type="submit">Save Profile</button></div>
+                        <div class="mt-5 text-center"> <a href="{{ route('logout', auth()->user()->id)}}" type="button" class="btn btn-danger m-0">Salir</a></div>
                     </div>
                 </div>
 

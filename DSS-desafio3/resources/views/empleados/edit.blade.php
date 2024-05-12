@@ -1,9 +1,9 @@
 @extends('layouts.app')
   
-@section('title', 'Edit empleados')
+
   
 @section('contents')
-    <h1 class="mb-0">Edit Product</h1>
+    <h1 class="mb-0">Editar Empleados</h1>
     <hr />
     <form action="{{ route('empleados.update', $empleados->id) }}" method="POST">
         @csrf

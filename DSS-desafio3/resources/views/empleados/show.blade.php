@@ -1,28 +1,27 @@
 @extends('layouts.app')
-  
-@section('title', 'Show Product')
+
   
 @section('contents')
-    <h1 class="mb-0">Detail Product</h1>
+    <h1 class="mb-0">Detalle Empleados</h1>
     <hr />
     <div class="row">
         <div class="col mb-3">
-            <label class="form-label">Title</label>
+            <label class="form-label">Nombre</label>
             <input type="text" name="name" class="form-control" placeholder="Title" value="{{ $empleados->name }}" readonly>
         </div>
         <div class="col mb-3">
-            <label class="form-label">Price</label>
+            <label class="form-label">Apellido</label>
             <input type="text" name="lastname" class="form-control" placeholder="Price" value="{{ $empleados->lastname }}" readonly>
         </div>
     </div>
     <div class="row">
         <div class="col mb-3">
-            <label class="form-label">product_code</label>
+            <label class="form-label">Correo Electronico</label>
             <input type="text" name="email" class="form-control" placeholder="Product Code" value="{{ $empleados->email }}" readonly>
         </div>
         <div class="col mb-3">
-            <label class="form-label">Description</label>
-            <textarea class="form-control" name="salario" placeholder="Descriptoin" readonly>{{ $empleados->salario }}</textarea>
+            <label class="form-label">Salario</label>
+            <input class="form-control" name="salario" placeholder="$"  value="${{ $empleados->salario }}" readonly>
         </div>
     </div>
     <div class="row">

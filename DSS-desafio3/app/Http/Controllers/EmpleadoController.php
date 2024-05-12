@@ -63,7 +63,7 @@ class EmpleadoController extends Controller
     $empleado = Auth::user();  // Ahora devuelve una instancia de Empleado
 
     if ($empleado->cargo === 'admin') {
-        return redirect()->route('dashboard'); // Redirección para administradores
+        return redirect()->route('empleados.index'); // Redirección para administradores
     } else {
         return redirect()->route('views.perfil', ['id' => $empleado->id]);  // Redirección para otros empleados
     }

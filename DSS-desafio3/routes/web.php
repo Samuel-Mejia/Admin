@@ -21,9 +21,9 @@ Route::controller(EmpleadoController::class)->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('empleados.index', function () {
+        return view('empleados.index');
+    })->name('empleados.index');
 
 
     Route::controller(EmpleadoController::class)->prefix('empleados')->group(function () {
@@ -47,9 +47,9 @@ Route::get('/', function () {
 })->name('welcome');
 
 // Ruta para el dashboard del administrador
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard')->middleware('auth');
+Route::get('/empleados.index', function () {
+    return view('empleados.index');
+})->name('empleados.index')->middleware('auth');
 
 
 

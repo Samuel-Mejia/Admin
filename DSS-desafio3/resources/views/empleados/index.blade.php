@@ -45,7 +45,7 @@
                             <div class="btn-group" role="group" aria-label="Basic example"
                                 style="">
                                 <a href="{{ route('empleados.edit', $empleado->id) }}" type="button"
-                                    class="btn btn-warning">Edit</a>*
+                                    class="btn btn-warning">Edit</a>
                             </div>
                             <div class="btn-group" role="group" aria-label="Basic example"
                                 style="">
