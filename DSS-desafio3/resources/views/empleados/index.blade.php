@@ -22,7 +22,7 @@
                 <th>Email</th>
                 <th>Cargo</th>
                 <th>Salario</th>
-                <th>Acción</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
