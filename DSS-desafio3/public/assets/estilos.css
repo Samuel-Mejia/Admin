@@ -1,0 +1,57 @@
+body{
+    background: #6a11cb;
+
+    /* Gradiente para Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+
+    /* Gradiente estándar para navegadores modernos */
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+}
+.gradient-custom {
+    /* Establecer que el contenedor ocupe toda la altura y anchura de la ventana del navegador */
+    width: 100%;
+    height: 150% ; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+
+
+    
+}
+
+.mb-0 {
+    margin-top: 7%;
+}
+
+
+.img{
+    width: 75%;
+    height: 75%;
+    margin-top: -65px;
+}
+
+
+#simonsytopro{
+    margin-top: 0%;
+}
+  
+.roww1{
+    margin-bottom: -25px;
+}
+
+.card-body {
+    margin-bottom: -30px;
+
+  }
+
+@media only screen and (max-width: 768px) {
+    .roww2 {
+      margin-bottom: -30px;
+    }
+    
+    .card-body {
+        margin-bottom: -40px;
+
+      }
+   
+  }
