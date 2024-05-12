@@ -62,7 +62,7 @@ class EmpleadoController extends Controller
 
     $empleado = Auth::user();  // Ahora devuelve una instancia de Empleado
 
-    if ($empleado->cargo === 'admin') {
+    if ($empleado->cargo === 'admin' || $empleado->cargo === 'Admin') {
         return redirect()->route('empleados.index'); // Redirección para administradores
     } else {
         return redirect()->route('views.perfil', ['id' => $empleado->id]);  // Redirección para otros empleados
@@ -124,7 +124,7 @@ class EmpleadoController extends Controller
     $empleado->cargo = $request->cargo; 
     $empleado->salario = $request->salario; 
     $empleado->email = $request->email; 
-    $empleado->password = $request->password; 
+    $empleado->password = Hash::make($request->password); 
     $empleado->save();
 
     return redirect()->route('empleados.index')->with('success', 'Empleado creado con éxito');

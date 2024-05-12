@@ -39,7 +39,7 @@
 
                   <div data-mdb-input-init class="form-outline form-white mb-4">
                     <label class="form-label" for="typeEmailX">Correo</label>
-                    <input name="email" type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                    <input name="email" type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Introduce un correo">
 
 
                     @error('email')
@@ -49,8 +49,8 @@
                     @enderror
                   </div>
                   <div data-mdb-input-init class="form-outline form-white mb-4">
-                    <label class="form-label" for="typePasswordX">ContraseÃ±a</label>
-                    <input name="password" type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                    <label class="form-label" for="typePasswordX">Contrase;a</label>
+                    <input name="password" type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Contrase;a">
 
 
                     @error('password')

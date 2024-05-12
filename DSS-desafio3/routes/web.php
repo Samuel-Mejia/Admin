@@ -21,10 +21,17 @@ Route::controller(EmpleadoController::class)->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('empleados.index', function () {
-        return view('empleados.index');
-    })->name('empleados.index');
+    Route::get('dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('welcome');
+    
+    Route::get('/empleados.index', function () {
+        return view('empleados.index');
+    })->name('empleados.index')->middleware('auth');
 
     Route::controller(EmpleadoController::class)->prefix('empleados')->group(function () {
         Route::get('', 'index')->name('empleados');
@@ -38,20 +45,6 @@ Route::middleware('auth')->group(function () {
         
     });
 
-    // Ruta para el perfil del usuario
-Route::get('/perfil/{id}', [EmpleadoController::class, 'showProfile'])->name('views.perfil')->middleware('auth');
-
-// Ruta para la vista de bienvenida
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
-
-// Ruta para el dashboard del administrador
-Route::get('/empleados.index', function () {
-    return view('empleados.index');
-})->name('empleados.index')->middleware('auth');
-
-
-
+    Route::get('/perfil/{id}', [EmpleadoController::class, 'showProfile'])->name('views.perfil')->middleware('auth');
     Route::get('/profile', [App\Http\Controllers\EmpleadoController::class, 'profile'])->name('profile');
 });

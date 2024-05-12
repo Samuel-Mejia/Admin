@@ -48,7 +48,7 @@
                   <div class="col-md-6 mb-4 ">
                   <div data-mdb-input-init class="form-outline form-white mb-4">
                 <label class="form-label" for="form2Example11">Nombre</label>
-                <input name="name" type="text" class="form-control form-control-user @error('name')is-invalid @enderror" id="exampleInputName" placeholder="Name">
+                <input name="name" type="text" class="form-control form-control-user @error('name')is-invalid @enderror" id="exampleInputName" placeholder="Nombre">
                   @error('name')
                     <span class="invalid-feedback">{{ $message }}</span>
                   @enderror
@@ -57,7 +57,7 @@
                   <div class="col-md-6 mb-4">
                   <div data-mdb-input-init class="form-outline form-white mb-4">
                 <label class="form-label" for="form2Example11">Apellido</label>
-                <input name="lastname" type="text" class="form-control form-control-user @error('lastname')is-invalid @enderror" id="exampleInputName" placeholder="Lastname">
+                <input name="lastname" type="text" class="form-control form-control-user @error('lastname')is-invalid @enderror" id="exampleInputName" placeholder="Apellido">
                   @error('lastname')
                     <span class="invalid-feedback">{{ $message }}</span>
                   @enderror
@@ -69,7 +69,7 @@
 
               <div data-mdb-input-init class="form-outline form-white mb-4">
                 <label class="form-label" for="typeEmailX">Correo</label>
-                <input name="email" type="email" class="form-control form-control-user @error('email')is-invalid @enderror" id="exampleInputEmail" placeholder="Email Address">
+                <input name="email" type="email" class="form-control form-control-user @error('email')is-invalid @enderror" id="exampleInputEmail" placeholder="Correo">
                   @error('email')
                     <span class="invalid-feedback">{{ $message }}</span>
                   @enderror
@@ -79,7 +79,7 @@
                   <div class="col-md-6 mb-4 ">
                   <div data-mdb-input-init class="form-outline form-white mb-4">
                <label class="form-label" for="typePasswordX">Contraseña</label>
-               <input name="password" type="password" class="form-control form-control-user @error('password')is-invalid @enderror" id="exampleInputPassword" placeholder="Password">
+               <input name="password" type="password" class="form-control form-control-user @error('password')is-invalid @enderror" id="exampleInputPassword" placeholder="Contrase;a ">
                     @error('password')
                       <span class="invalid-feedback">{{ $message }}</span>
                     @enderror
@@ -89,7 +89,7 @@
                   <div class="col-md-6 mb-4 ">
                   <div data-mdb-input-init class="form-outline form-white mb-4">
                <label class="form-label" for="typePasswordX">Confirmar contraseña</label>
-               <input name="password_confirmation" type="password" class="form-control form-control-user @error('password_confirmation')is-invalid @enderror" id="exampleRepeatPassword" placeholder="Repeat Password">
+               <input name="password_confirmation" type="password" class="form-control form-control-user @error('password_confirmation')is-invalid @enderror" id="exampleRepeatPassword" placeholder="Repetir Contrase;a ">
                     @error('password_confirmation')
                       <span class="invalid-feedback">{{ $message }}</span>
                     @enderror 

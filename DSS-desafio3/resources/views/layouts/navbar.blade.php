@@ -42,7 +42,7 @@
           <li class="nav-item dropdown">
           <a class="nav-link" href="/profile">
       {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
-      <span style="text-decoration: underline !important;">Profile</span></a>
+      <span style="text-decoration: underline !important;">Perfil</span></a>
             
           </li>
         </ul>
